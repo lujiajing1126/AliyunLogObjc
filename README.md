@@ -18,6 +18,19 @@ github "lujiajing1126/AliyunLogObjc"
 
 CocoaPods is not supported now
 
+## Example
+
+```objc
+#import <AliyunLogObjc/AliyunLogObjc.h> 
+LogClient *client = [[LogClient alloc] initWithApp: @"endpoint" accessKeyID:@"" accessKeySecret:"" projectName:@""];
+LogGroup *logGroup = [[LogGroup alloc] initWithTopic: @"" andSource:@""];
+Log *log1 = [[Log alloc] init];
+[log1 PutContent: @"Value" withKey: @"Key"];
+[logGroup PutLog:log1];
+[client PostLog:logGroup logStoreName: @""];
+
+```
+
 ## Acknownledge
 
 https://github.com/aliyun/aliyun-log-ios-sdk
