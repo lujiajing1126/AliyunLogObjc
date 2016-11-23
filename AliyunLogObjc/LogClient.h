@@ -27,7 +27,7 @@
 - (NSString*)GetEndPoint;
 - (NSString*)GetKeyID;
 - (NSString*)GetKeySecret;
-- (void)PostLog:(LogGroup*)logGroup logStoreName:(NSString*)name call:(void (^)(NSURLResponse*,NSError*) )errorCallback;
+- (void)PostLog:(LogGroup*)logGroup logStoreName:(NSString*)name call:(void (^)(NSURLResponse* _Nullable response,NSError* _Nullable error) )errorCallback;
 
 @end
 
