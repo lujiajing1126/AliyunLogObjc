@@ -50,7 +50,7 @@
     return _mAccessKeySecret;
 }
 
-- (void)PostLog:(LogGroup*)logGroup logStoreName:(NSString*)name {
+- (void)PostLog:(LogGroup*)logGroup logStoreName:(NSString*)name call:(void (^)(NSURLResponse*,NSError*) )errorCallback {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSString *httpUrl = [NSString stringWithFormat:@"http://%@.%@/logstores/%@/shards/lb",_mProject,_mEndPoint,name];
         NSData *httpPostBody = [[logGroup GetJsonPackage] dataUsingEncoding:NSUTF8StringEncoding];
@@ -58,7 +58,7 @@
         
         NSDictionary<NSString*,NSString*>* httpHeaders = [self GetHttpHeadersFrom:name url:httpUrl body:httpPostBody bodyZipped:httpPostBodyZipped];
         
-        [self HttpPostRequest: httpUrl withHeaders:httpHeaders andBody:httpPostBodyZipped];
+        [self HttpPostRequest: httpUrl withHeaders:httpHeaders andBody:httpPostBodyZipped callback:errorCallback];
     });
 }
 
@@ -99,7 +99,7 @@
     return headers;
 }
 
--(void)HttpPostRequest: (NSString*)url withHeaders:(NSDictionary<NSString*,NSString*>*)headers andBody:(NSData*)body {
+-(void)HttpPostRequest: (NSString*)url withHeaders:(NSDictionary<NSString*,NSString*>*)headers andBody:(NSData*)body callback:(void (^)(NSURLResponse*,NSError*)) call {
     NSURL *httpUrl = [NSURL URLWithString: url];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:httpUrl];
     [request setHTTPMethod:@"POST"];
@@ -113,22 +113,7 @@
     NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:config];
     NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        if(response != nil) {
-            NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse*)response;
-            if(httpResponse.statusCode != 200) {
-                NSError *jsonErr = nil;
-                NSDictionary<NSString*,NSObject*> *jsonResult = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonErr];
-                if(jsonErr == nil) {
-                    NSLog(@"Result: %@",[jsonResult description]);
-                } else {
-                    NSLog(@"%@",[jsonErr localizedDescription]);
-                }
-            } else {
-                NSLog(@"%@",[error localizedDescription]);
-            }
-        } else {
-            NSLog(@"Invalid address: %@",url);
-        }
+        call(response,error);
     }];
     [task resume];
 }
