@@ -22,12 +22,15 @@ CocoaPods is not supported now
 
 ```objc
 #import <AliyunLogObjc/AliyunLogObjc.h> 
-LogClient *client = [[LogClient alloc] initWithApp: @"endpoint" accessKeyID:@"" accessKeySecret:"" projectName:@""];
+LogClient *client = [[LogClient alloc] initWithApp: @"endpoint" accessKeyID:@"" accessKeySecret:@"" projectName:@""];
 LogGroup *logGroup = [[LogGroup alloc] initWithTopic: @"" andSource:@""];
 Log *log1 = [[Log alloc] init];
 [log1 PutContent: @"Value" withKey: @"Key"];
 [logGroup PutLog:log1];
-[client PostLog:logGroup logStoreName: @""];
+[client PostLog:logGroup logStoreName: @"" call:^(NSURLResponse* _Nullable response,NSError* _Nullable error) {
+	if (error != nil) {
+	}
+}];
 
 ```
 
