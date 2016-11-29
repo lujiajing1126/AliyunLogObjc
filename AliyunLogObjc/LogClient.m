@@ -112,6 +112,12 @@
     }
     
     NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSString *cachePath = @"AliyunURLCache";
+    NSURLCache *cache = [[NSURLCache alloc]initWithMemoryCapacity:16*1024 diskCapacity:256*1024*1024 diskPath:cachePath];
+    config.URLCache = cache;
+    config.requestCachePolicy = NSURLRequestUseProtocolCachePolicy;
+    
+    
     NSURLSession *session = [NSURLSession sessionWithConfiguration:config];
     NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if(response != nil) {
@@ -133,6 +139,7 @@
         call(response,error);
     }];
     [task resume];
+    [session finishTasksAndInvalidate];
 }
 
 -(NSString *)getHostIn: (NSString*) url {
