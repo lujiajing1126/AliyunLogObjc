@@ -52,7 +52,9 @@
 
 - (void)PostLog:(LogGroup*)logGroup logStoreName:(NSString*)name call:(void (^)(NSURLResponse* _Nullable response,NSError* _Nullable error) )errorCallback {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        NSString *httpUrl = [NSString stringWithFormat:@"http://%@.%@/logstores/%@/shards/lb",_mProject,_mEndPoint,name];
+        // Force to use https api interface
+        // Due to the requirement of Apple Security Policy after Jan. 1st, 2017
+        NSString *httpUrl = [NSString stringWithFormat:@"https://%@.%@/logstores/%@/shards/lb",_mProject,_mEndPoint,name];
         NSData *httpPostBody = [[logGroup GetJsonPackage] dataUsingEncoding:NSUTF8StringEncoding];
         NSData *httpPostBodyZipped = [httpPostBody gzippedData];
         
