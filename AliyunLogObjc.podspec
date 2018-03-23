@@ -24,9 +24,18 @@ This SDK is mostly interpreted from the official one, but the quality of code ha
   
     s.ios.deployment_target = '11.2'
   
-    s.source_files = 'AliyunLogObjc/**/*.{h,m}'
+    s.pod_target_xcconfig = { 'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) GPB_USE_PROTOBUF_FRAMEWORK_IMPORTS=1' }
   
+    s.source_files = 'AliyunLogObjc/**/*.{h,m}'
+    s.exclude_files = 'AliyunLogObjc/**/*.pbobjc.{h,m}'
+    s.requires_arc = true
+
+    s.subspec 'no-arc' do |sp|
+      sp.source_files = 'AliyunLogObjc/**/*.pbobjc.{h,m}'
+      sp.requires_arc = false
+    end
+
     # s.public_header_files = 'Pod/Classes/**/*.h'
     # s.frameworks = 'UIKit', 'MapKit'
-    spec.dependency 'Protobuf', '~> 3.2.1'
+    s.dependency 'Protobuf', '~> 3.2.1'
   end
