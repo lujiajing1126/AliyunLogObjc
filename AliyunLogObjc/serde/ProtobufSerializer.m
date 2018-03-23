@@ -34,7 +34,10 @@
         [log setTime: [[rawLog GetTime] unsignedIntValue]];
         NSDictionary<NSString *, NSString *> *dict = [rawLog GetContent];
         for (NSString* key in dict) {
-            [log setValue: [dict valueForKey:key] forKey: key];
+            Log_Content *logContent = [[Log_Content alloc] init];
+            [logContent setKey: key];
+            [logContent setValue: [dict objectForKey:key]];
+            [[log contentsArray] addObject: logContent];
         }
         [logs addObject:log];
     }

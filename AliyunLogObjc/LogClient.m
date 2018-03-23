@@ -69,7 +69,12 @@
     NSMutableDictionary<NSString*,NSString*> *headers = [[NSMutableDictionary alloc] init];
     [headers setValue:POST_VALUE_LOG_APIVERSION forKey:KEY_LOG_APIVERSION];
     [headers setValue:POST_VALUE_LOG_SIGNATUREMETHOD forKey:KEY_LOG_SIGNATUREMETHOD];
-    [headers setValue:POST_VALUE_LOG_CONTENTTYPE forKey:KEY_CONTENT_TYPE];
+    [headers setValue:POST_VALUE_LOG_UA forKey: KEY_LOG_CLIENT];
+    if (_sType == AliSLSJSONSerializer) {
+        [headers setValue:POST_VALUE_LOG_JSON_CONTENT_TYPE forKey:KEY_CONTENT_TYPE];
+    } else {
+        [headers setValue:POST_VALUE_LOG_PB_CONTENT_TYPE forKey:KEY_CONTENT_TYPE];
+    }
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter.dateFormat = HTTP_DATE_FORMAT;

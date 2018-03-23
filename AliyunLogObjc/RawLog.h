@@ -11,14 +11,14 @@
 #define RawLog_h
 
 @interface RawLog : NSObject {
-    NSMutableDictionary<NSString*,NSString*> *_mContent;
+    NSMutableDictionary<NSString *,NSString *> *_mContent;
     NSNumber *_time;
 }
 
 -(void)PutContent: (NSString *)value withKey:(NSString *) key;
 -(void)PutTime: (NSInteger) time;
 -(NSNumber *)GetTime;
--(NSDictionary<NSString*,NSString*> *)GetContent;
+-(NSDictionary<NSString *,NSString *> *)GetContent;
 -(NSUInteger)GetContentCount;
 
 @end

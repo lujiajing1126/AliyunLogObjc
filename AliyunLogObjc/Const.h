@@ -29,14 +29,17 @@
 #define KEY_LOG_BODYRAWSIZE @"x-log-bodyrawsize"
 #define KEY_LOG_COMPRESSTYPE @"x-log-compresstype"
 #define KEY_LOG_SIGNATUREMETHOD @"x-log-signaturemethod"
+#define KEY_LOG_CLIENT @"User-Agent"
 
 #define KEY_ACS_SECURITY_TOKEN @"x-acs-security-token"
 #define KEY_AUTHORIZATION @"Authorization"
 
 #define POST_VALUE_LOG_APIVERSION @"0.6.0"
 #define POST_VALUE_LOG_COMPRESSTYPE @"deflate"
-#define POST_VALUE_LOG_CONTENTTYPE @"application/json"
+#define POST_VALUE_LOG_JSON_CONTENT_TYPE @"application/json"
+#define POST_VALUE_LOG_PB_CONTENT_TYPE @"application/x-protobuf"
 #define POST_VALUE_LOG_SIGNATUREMETHOD @"hmac-sha1"
+#define POST_VALUE_LOG_UA @"AliyunLogClientObjc/1.1.0.20180323"
 
 
 #define POST_METHOD_NAME @"POST"

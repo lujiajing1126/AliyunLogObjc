@@ -27,9 +27,9 @@
     [package setValue: [group GetTopic] forKey: KEY_TOPIC];
     [package setValue: [group GetSource] forKey: KEY_SOURCE];
     NSArray<RawLog *> *rawLogs = [group GetLogs];
-    NSMutableArray<NSDictionary<NSString *, NSString *> *> *contents = [[NSMutableArray alloc] init];
+    NSMutableArray<NSDictionary<NSString *, NSObject *> *> *contents = [[NSMutableArray alloc] init];
     for (int i = 0; i < [rawLogs count]; i++) {
-        NSMutableDictionary<NSString *, NSString *> *rawLog = [[NSMutableDictionary alloc] init];
+        NSMutableDictionary<NSString *, NSObject *> *rawLog = [[NSMutableDictionary alloc] init];
         NSDictionary<NSString*,NSString*> * logKeyPairs = [[rawLogs objectAtIndex: i] GetContent];
         for (NSString* key in logKeyPairs) {
             [rawLog setValue: [logKeyPairs objectForKey:key] forKey: key];
@@ -37,9 +37,10 @@
         [rawLog setValue: [[[rawLogs objectAtIndex:i] GetTime] stringValue] forKey: KEY_TIME];
         [contents addObject: rawLog];
     }
-    [package setValue: NULL forKey:@"__logs__"];
+    [package setValue: contents forKey: KEY_LOGS];
     NSError *e = nil;
     NSData *data = [NSJSONSerialization dataWithJSONObject:package options:NSJSONWritingPrettyPrinted error: &e];
+    NSString *jsonString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     if(e) {
         return [[NSData alloc] init];
     }
