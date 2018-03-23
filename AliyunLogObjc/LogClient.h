@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Serializer.h"
 @class LogGroup;
 
 #ifndef LogClient_h
@@ -18,16 +19,17 @@
     NSString *_mAccessKeySecret;
     NSString *_mProject;
     NSString *_mAccessToken;
+    AliSLSSerializer _sType;
 }
 
-- (id)initWithApp:(NSString*) endPoint accessKeyID:(NSString *)ak accessKeySecret: (NSString *)as projectName: (NSString *)name;
+- (id)initWithApp:(NSString*) endPoint accessKeyID:(NSString *)ak accessKeySecret: (NSString *)as projectName: (NSString *)name serializeType: (AliSLSSerializer) sType;
 
 - (void)SetToken: (NSString*) token;
 - (NSString*)GetToken;
 - (NSString*)GetEndPoint;
 - (NSString*)GetKeyID;
 - (NSString*)GetKeySecret;
-- (void)PostLog:(LogGroup*)logGroup logStoreName:(NSString*)name call:(void (^)(NSURLResponse* _Nullable response,NSError* _Nullable error) )errorCallback;
+- (void)PostLog: (RawLogGroup*)logGroup logStoreName:(NSString*)name call:(void (^)(NSURLResponse* _Nullable response,NSError* _Nullable error) )errorCallback;
 
 @end
 
