@@ -7,24 +7,28 @@
 //
 
 #import <Foundation/Foundation.h>
-@class Log;
+#import "Serializer.h"
+@class RawLog;
 
-#ifndef LogGroup_h
-#define LogGroup_h
+#ifndef RawLogGroup_h
+#define RawLogGroup_h
 
-@interface LogGroup : NSObject {
+@interface RawLogGroup : NSObject {
     NSString *_mTopic;
     NSString *_mSource;
-    NSMutableArray<NSDictionary<NSString*,NSObject*>*> *_mContent;
+    NSMutableArray<RawLog *> *_rawLogs;
 }
 
 - (id)initWithTopic: (NSString *) topic andSource:(NSString *) source;
+- (NSString *)GetTopic;
+- (NSString *)GetSource;
+- (NSMutableArray<RawLog *> *)GetLogs;
 - (void)PutTopic: (NSString *)topic;
 - (void)PutSource: (NSString *)source;
-- (void)PutLog: (Log *)log;
-- (NSString *)GetJsonPackage;
+- (void)PutLog: (RawLog *)log;
+- (NSData *)serialize: (AliSLSSerializer) serdeType;
 
 @end
 
 
-#endif /* LogGroup_h */
+#endif /* RawLogGroup_h */

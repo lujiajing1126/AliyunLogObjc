@@ -36,3 +36,8 @@ xcuserdata/
 *.xccheckout
 *.xcscmblueprint
 .idea
+
+*.pbobjc.h
+*.pbobjc.m
+
+AliyunLogDemo/*

@@ -6,16 +6,15 @@
 //  Copyright © 2016年 陆家靖. All rights reserved.
 //
 
-#import "Log.h"
+#import "RawLog.h"
 
-@implementation Log
+@implementation RawLog
 
 -(id)init {
     if(self = [super init]) {
         _mContent = [[NSMutableDictionary alloc] init];
         NSTimeInterval epoch = [[[NSDate alloc] init] timeIntervalSince1970];
-        NSNumber *epochNumber = [[NSNumber alloc]initWithLong:epoch];
-        [_mContent setValue: epochNumber forKey:@"__time__"];
+        _time = [[NSNumber alloc] initWithLong:epoch];
     }
     return self;
 }
@@ -30,17 +29,19 @@
     [_mContent setValue:value forKey:key];
 }
 
--(void)PutTime:(int)time {
-    if ( time > [[[NSDate alloc] init] timeIntervalSince1970]) {
-        [_mContent setValue:[[NSNumber alloc] initWithInt:time] forKey:@"__time__"];
-    }
+-(void)PutTime:(NSInteger) time {
+    _time = [[NSNumber alloc] initWithLong: time];
 }
 
--(NSDictionary<NSString*,NSObject*> *)GetContent {
+-(NSNumber *)GetTime {
+    return _time;
+}
+
+-(NSDictionary<NSString*,NSString*> *) GetContent {
     return _mContent;
 }
 
--(NSUInteger)GetContentCount {
+-(NSUInteger) GetContentCount {
     return [_mContent count];
 }
 
