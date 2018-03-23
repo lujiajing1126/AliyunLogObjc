@@ -11,6 +11,8 @@
 		6E3D3BA72064F4D20053427E /* AliyunLogObjc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EE9604E1DC23C87003586C1 /* AliyunLogObjc.framework */; };
 		6E3D3BA82064F4D20053427E /* AliyunLogObjc.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6EE9604E1DC23C87003586C1 /* AliyunLogObjc.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6E3D3BAC2064F6370053427E /* Serializer.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EA0AC452064B01900A71863 /* Serializer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E3D3BC8206505F40053427E /* AliyunLogObjc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EE9604E1DC23C87003586C1 /* AliyunLogObjc.framework */; };
+		6E3D3BC9206505F40053427E /* AliyunLogObjc.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6EE9604E1DC23C87003586C1 /* AliyunLogObjc.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6EA0AC422064AFE200A71863 /* JSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA0AC412064AFE200A71863 /* JSONSerializer.m */; };
 		6EA0AC442064B00400A71863 /* ProtobufSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA0AC432064B00400A71863 /* ProtobufSerializer.m */; };
 		6EA0AC462064B01900A71863 /* Serializer.h in Sources */ = {isa = PBXBuildFile; fileRef = 6EA0AC452064B01900A71863 /* Serializer.h */; };
@@ -40,6 +42,13 @@
 			remoteGlobalIDString = 6EE9604D1DC23C87003586C1;
 			remoteInfo = AliyunLogObjc;
 		};
+		6E3D3BCA206505F40053427E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6EE960451DC23C87003586C1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6EE9604D1DC23C87003586C1;
+			remoteInfo = AliyunLogObjc;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -54,6 +63,17 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6E3D3BCC206505F40053427E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6E3D3BC9206505F40053427E /* AliyunLogObjc.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +82,7 @@
 		6E3D3B8A2064E26A0053427E /* JSONSerializer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSONSerializer.h; sourceTree = "<group>"; };
 		6E3D3B8B2064E2A00053427E /* ProtobufSerializer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProtobufSerializer.h; sourceTree = "<group>"; };
 		6E3D3B902064F4270053427E /* AliyunLogDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AliyunLogDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E3D3BB2206505760053427E /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EA0AC412064AFE200A71863 /* JSONSerializer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSONSerializer.m; sourceTree = "<group>"; };
 		6EA0AC432064B00400A71863 /* ProtobufSerializer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProtobufSerializer.m; sourceTree = "<group>"; };
 		6EA0AC452064B01900A71863 /* Serializer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Serializer.h; sourceTree = "<group>"; };
@@ -94,6 +115,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E3D3BA72064F4D20053427E /* AliyunLogObjc.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E3D3BAF206505760053427E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E3D3BC8206505F40053427E /* AliyunLogObjc.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +176,7 @@
 			children = (
 				6EE9604E1DC23C87003586C1 /* AliyunLogObjc.framework */,
 				6E3D3B902064F4270053427E /* AliyunLogDemo.app */,
+				6E3D3BB2206505760053427E /* Demo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -225,6 +255,25 @@
 			productReference = 6E3D3B902064F4270053427E /* AliyunLogDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		6E3D3BB1206505760053427E /* Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E3D3BC5206505760053427E /* Build configuration list for PBXNativeTarget "Demo" */;
+			buildPhases = (
+				6E3D3BAE206505760053427E /* Sources */,
+				6E3D3BAF206505760053427E /* Frameworks */,
+				6E3D3BB0206505760053427E /* Resources */,
+				6E3D3BCC206505F40053427E /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6E3D3BCB206505F40053427E /* PBXTargetDependency */,
+			);
+			name = Demo;
+			productName = Demo;
+			productReference = 6E3D3BB2206505760053427E /* Demo.app */;
+			productType = "com.apple.product-type.application";
+		};
 		6EE9604D1DC23C87003586C1 /* AliyunLogObjc */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6EE960561DC23C87003586C1 /* Build configuration list for PBXNativeTarget "AliyunLogObjc" */;
@@ -260,6 +309,11 @@
 						DevelopmentTeam = K3RAK387M7;
 						ProvisioningStyle = Automatic;
 					};
+					6E3D3BB1206505760053427E = {
+						CreatedOnToolsVersion = 9.2;
+						DevelopmentTeam = K3RAK387M7;
+						ProvisioningStyle = Automatic;
+					};
 					6EE9604D1DC23C87003586C1 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = K3RAK387M7;
@@ -282,12 +336,20 @@
 			targets = (
 				6EE9604D1DC23C87003586C1 /* AliyunLogObjc */,
 				6E3D3B8F2064F4270053427E /* AliyunLogDemo */,
+				6E3D3BB1206505760053427E /* Demo */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		6E3D3B8E2064F4270053427E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E3D3BB0206505760053427E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -360,6 +422,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6E3D3BAE206505760053427E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6EE960491DC23C87003586C1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -384,6 +453,11 @@
 			isa = PBXTargetDependency;
 			target = 6EE9604D1DC23C87003586C1 /* AliyunLogObjc */;
 			targetProxy = 6E3D3BA92064F4D20053427E /* PBXContainerItemProxy */;
+		};
+		6E3D3BCB206505F40053427E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6EE9604D1DC23C87003586C1 /* AliyunLogObjc */;
+			targetProxy = 6E3D3BCA206505F40053427E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -421,6 +495,44 @@
 				INFOPLIST_FILE = AliyunLogDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wosai.AliyunLogDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6E3D3BC6206505760053427E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K3RAK387M7;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = Demo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wosai.Demo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6E3D3BC7206505760053427E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K3RAK387M7;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = Demo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wosai.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -589,6 +701,15 @@
 			buildConfigurations = (
 				6E3D3BA42064F4270053427E /* Debug */,
 				6E3D3BA52064F4270053427E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6E3D3BC5206505760053427E /* Build configuration list for PBXNativeTarget "Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E3D3BC6206505760053427E /* Debug */,
+				6E3D3BC7206505760053427E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

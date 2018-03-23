@@ -34,7 +34,7 @@
         for (NSString* key in logKeyPairs) {
             [rawLog setValue: [logKeyPairs objectForKey:key] forKey: key];
         }
-        [rawLog setValue: [[[rawLogs objectAtIndex:i] GetTime] stringValue] forKey: KEY_TIME];
+        [rawLog setValue: [[rawLogs objectAtIndex:i] GetTime] forKey: KEY_TIME];
         [contents addObject: rawLog];
     }
     [package setValue: contents forKey: KEY_LOGS];
