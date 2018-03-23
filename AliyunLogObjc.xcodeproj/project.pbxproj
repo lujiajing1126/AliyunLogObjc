@@ -7,15 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		342A92E7FBF0A13C94F7B88D /* libPods-AliyunLogObjc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D0606825DE473AD074AF974 /* libPods-AliyunLogObjc.a */; };
+		6EA0AC422064AFE200A71863 /* JSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA0AC412064AFE200A71863 /* JSONSerializer.m */; };
+		6EA0AC442064B00400A71863 /* ProtobufSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA0AC432064B00400A71863 /* ProtobufSerializer.m */; };
+		6EA0AC462064B01900A71863 /* Serializer.h in Sources */ = {isa = PBXBuildFile; fileRef = 6EA0AC452064B01900A71863 /* Serializer.h */; };
+		6EA0AC4B2064D35800A71863 /* Sls.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EA0AC492064D35800A71863 /* Sls.pbobjc.h */; };
+		6EA0AC4C2064D35800A71863 /* Sls.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA0AC4A2064D35800A71863 /* Sls.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6EE960531DC23C87003586C1 /* AliyunLogObjc.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EE960511DC23C87003586C1 /* AliyunLogObjc.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6EE9605A1DC23CB5003586C1 /* Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EE960591DC23CB5003586C1 /* Log.m */; };
-		6EE9605D1DC2438C003586C1 /* LogGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EE9605C1DC2438C003586C1 /* LogGroup.m */; };
+		6EE9605A1DC23CB5003586C1 /* RawLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EE960591DC23CB5003586C1 /* RawLog.m */; };
+		6EE9605D1DC2438C003586C1 /* RawLogGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EE9605C1DC2438C003586C1 /* RawLogGroup.m */; };
 		6EE960611DC247A0003586C1 /* LogClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EE960601DC247A0003586C1 /* LogClient.m */; };
 		6EE960661DC2563F003586C1 /* NSData+MD5Digest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EE960641DC2563F003586C1 /* NSData+MD5Digest.m */; };
 		6EE9606E1DC25A64003586C1 /* NSData+GZIP.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EE9606C1DC25A64003586C1 /* NSData+GZIP.m */; };
 		6EE960721DC25D6D003586C1 /* NSString+Crypto.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EE960701DC25D6D003586C1 /* NSString+Crypto.m */; };
-		6EE960A71DC2681E003586C1 /* Log.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EE9605B1DC23CC4003586C1 /* Log.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6EE960A81DC2681E003586C1 /* LogGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EE9605E1DC24399003586C1 /* LogGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6EE960A71DC2681E003586C1 /* RawLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EE9605B1DC23CC4003586C1 /* RawLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6EE960A81DC2681E003586C1 /* RawLogGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EE9605E1DC24399003586C1 /* RawLogGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6EE960A91DC2681E003586C1 /* LogClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EE9605F1DC24795003586C1 /* LogClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6EE960AA1DC2681E003586C1 /* Const.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EE960621DC24C17003586C1 /* Const.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6EE960AB1DC2681E003586C1 /* NSData+MD5Digest.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EE960631DC2563F003586C1 /* NSData+MD5Digest.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -24,13 +30,24 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D0606825DE473AD074AF974 /* libPods-AliyunLogObjc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AliyunLogObjc.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		61E8EE7E5F02BF282549BBCF /* Pods-AliyunLogObjc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AliyunLogObjc.release.xcconfig"; path = "Pods/Target Support Files/Pods-AliyunLogObjc/Pods-AliyunLogObjc.release.xcconfig"; sourceTree = "<group>"; };
+		6E3D3B8A2064E26A0053427E /* JSONSerializer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSONSerializer.h; sourceTree = "<group>"; };
+		6E3D3B8B2064E2A00053427E /* ProtobufSerializer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProtobufSerializer.h; sourceTree = "<group>"; };
+		6EA0AC412064AFE200A71863 /* JSONSerializer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSONSerializer.m; sourceTree = "<group>"; };
+		6EA0AC432064B00400A71863 /* ProtobufSerializer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProtobufSerializer.m; sourceTree = "<group>"; };
+		6EA0AC452064B01900A71863 /* Serializer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Serializer.h; sourceTree = "<group>"; };
+		6EA0AC492064D35800A71863 /* Sls.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sls.pbobjc.h; sourceTree = "<group>"; };
+		6EA0AC4A2064D35800A71863 /* Sls.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sls.pbobjc.m; sourceTree = "<group>"; };
+		6EA0AC4E2064D36C00A71863 /* libprotobuf.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libprotobuf.tbd; path = usr/lib/libprotobuf.tbd; sourceTree = SDKROOT; };
+		6EA0AC502064D3C900A71863 /* libprotobuf-lite.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libprotobuf-lite.tbd"; path = "usr/lib/libprotobuf-lite.tbd"; sourceTree = SDKROOT; };
 		6EE9604E1DC23C87003586C1 /* AliyunLogObjc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AliyunLogObjc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EE960511DC23C87003586C1 /* AliyunLogObjc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AliyunLogObjc.h; sourceTree = "<group>"; };
 		6EE960521DC23C87003586C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6EE960591DC23CB5003586C1 /* Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Log.m; sourceTree = "<group>"; };
-		6EE9605B1DC23CC4003586C1 /* Log.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Log.h; sourceTree = "<group>"; };
-		6EE9605C1DC2438C003586C1 /* LogGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogGroup.m; sourceTree = "<group>"; };
-		6EE9605E1DC24399003586C1 /* LogGroup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogGroup.h; sourceTree = "<group>"; };
+		6EE960591DC23CB5003586C1 /* RawLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RawLog.m; sourceTree = "<group>"; };
+		6EE9605B1DC23CC4003586C1 /* RawLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RawLog.h; sourceTree = "<group>"; };
+		6EE9605C1DC2438C003586C1 /* RawLogGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RawLogGroup.m; sourceTree = "<group>"; };
+		6EE9605E1DC24399003586C1 /* RawLogGroup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RawLogGroup.h; sourceTree = "<group>"; };
 		6EE9605F1DC24795003586C1 /* LogClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogClient.h; sourceTree = "<group>"; };
 		6EE960601DC247A0003586C1 /* LogClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogClient.m; sourceTree = "<group>"; };
 		6EE960621DC24C17003586C1 /* Const.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Const.h; sourceTree = "<group>"; };
@@ -40,6 +57,7 @@
 		6EE9606C1DC25A64003586C1 /* NSData+GZIP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+GZIP.m"; sourceTree = "<group>"; };
 		6EE9606F1DC25D6D003586C1 /* NSString+Crypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Crypto.h"; sourceTree = "<group>"; };
 		6EE960701DC25D6D003586C1 /* NSString+Crypto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Crypto.m"; sourceTree = "<group>"; };
+		E7AC2BEE189EE89BC7931604 /* Pods-AliyunLogObjc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AliyunLogObjc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AliyunLogObjc/Pods-AliyunLogObjc.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,17 +65,44 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				342A92E7FBF0A13C94F7B88D /* libPods-AliyunLogObjc.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6EA0AC402064AFAD00A71863 /* serde */ = {
+			isa = PBXGroup;
+			children = (
+				6EA0AC492064D35800A71863 /* Sls.pbobjc.h */,
+				6EA0AC4A2064D35800A71863 /* Sls.pbobjc.m */,
+				6EA0AC452064B01900A71863 /* Serializer.h */,
+				6E3D3B8A2064E26A0053427E /* JSONSerializer.h */,
+				6EA0AC412064AFE200A71863 /* JSONSerializer.m */,
+				6E3D3B8B2064E2A00053427E /* ProtobufSerializer.h */,
+				6EA0AC432064B00400A71863 /* ProtobufSerializer.m */,
+			);
+			path = serde;
+			sourceTree = "<group>";
+		};
+		6EA0AC4D2064D36C00A71863 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6EA0AC502064D3C900A71863 /* libprotobuf-lite.tbd */,
+				6EA0AC4E2064D36C00A71863 /* libprotobuf.tbd */,
+				4D0606825DE473AD074AF974 /* libPods-AliyunLogObjc.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6EE960441DC23C87003586C1 = {
 			isa = PBXGroup;
 			children = (
 				6EE960501DC23C87003586C1 /* AliyunLogObjc */,
 				6EE9604F1DC23C87003586C1 /* Products */,
+				6EA0AC4D2064D36C00A71863 /* Frameworks */,
+				9633E4438E5DA8B1B82C541A /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,12 +117,13 @@
 		6EE960501DC23C87003586C1 /* AliyunLogObjc */ = {
 			isa = PBXGroup;
 			children = (
+				6EA0AC402064AFAD00A71863 /* serde */,
 				6EE960511DC23C87003586C1 /* AliyunLogObjc.h */,
 				6EE960521DC23C87003586C1 /* Info.plist */,
-				6EE960591DC23CB5003586C1 /* Log.m */,
-				6EE9605B1DC23CC4003586C1 /* Log.h */,
-				6EE9605C1DC2438C003586C1 /* LogGroup.m */,
-				6EE9605E1DC24399003586C1 /* LogGroup.h */,
+				6EE960591DC23CB5003586C1 /* RawLog.m */,
+				6EE9605B1DC23CC4003586C1 /* RawLog.h */,
+				6EE9605C1DC2438C003586C1 /* RawLogGroup.m */,
+				6EE9605E1DC24399003586C1 /* RawLogGroup.h */,
 				6EE9605F1DC24795003586C1 /* LogClient.h */,
 				6EE960601DC247A0003586C1 /* LogClient.m */,
 				6EE960621DC24C17003586C1 /* Const.h */,
@@ -91,6 +137,15 @@
 			path = AliyunLogObjc;
 			sourceTree = "<group>";
 		};
+		9633E4438E5DA8B1B82C541A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E7AC2BEE189EE89BC7931604 /* Pods-AliyunLogObjc.debug.xcconfig */,
+				61E8EE7E5F02BF282549BBCF /* Pods-AliyunLogObjc.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -99,10 +154,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EE960531DC23C87003586C1 /* AliyunLogObjc.h in Headers */,
-				6EE960A71DC2681E003586C1 /* Log.h in Headers */,
-				6EE960A81DC2681E003586C1 /* LogGroup.h in Headers */,
+				6EE960A71DC2681E003586C1 /* RawLog.h in Headers */,
+				6EE960A81DC2681E003586C1 /* RawLogGroup.h in Headers */,
 				6EE960A91DC2681E003586C1 /* LogClient.h in Headers */,
 				6EE960AA1DC2681E003586C1 /* Const.h in Headers */,
+				6EA0AC4B2064D35800A71863 /* Sls.pbobjc.h in Headers */,
 				6EE960AB1DC2681E003586C1 /* NSData+MD5Digest.h in Headers */,
 				6EE960AC1DC2681E003586C1 /* NSData+GZIP.h in Headers */,
 				6EE960AD1DC2681E003586C1 /* NSString+Crypto.h in Headers */,
@@ -116,10 +172,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6EE960561DC23C87003586C1 /* Build configuration list for PBXNativeTarget "AliyunLogObjc" */;
 			buildPhases = (
+				CC1D5309D4B7A2D52BC0CB80 /* [CP] Check Pods Manifest.lock */,
+				6EA0AC542064D4FF00A71863 /* ShellScript */,
 				6EE960491DC23C87003586C1 /* Sources */,
 				6EE9604A1DC23C87003586C1 /* Frameworks */,
 				6EE9604B1DC23C87003586C1 /* Headers */,
 				6EE9604C1DC23C87003586C1 /* Resources */,
+				B3CB332ADD034BD99C8FCC84 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -174,17 +233,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6EA0AC542064D4FF00A71863 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "protoc -I \"${PROJECT_DIR}/AliyunLogObjc\" --objc_out=\"${PROJECT_DIR}/AliyunLogObjc/serde\" \"${PROJECT_DIR}/AliyunLogObjc/sls.proto\"";
+		};
+		B3CB332ADD034BD99C8FCC84 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AliyunLogObjc/Pods-AliyunLogObjc-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC1D5309D4B7A2D52BC0CB80 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AliyunLogObjc-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6EE960491DC23C87003586C1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				6EE960661DC2563F003586C1 /* NSData+MD5Digest.m in Sources */,
-				6EE9605D1DC2438C003586C1 /* LogGroup.m in Sources */,
+				6EA0AC4C2064D35800A71863 /* Sls.pbobjc.m in Sources */,
+				6EE9605D1DC2438C003586C1 /* RawLogGroup.m in Sources */,
+				6EA0AC442064B00400A71863 /* ProtobufSerializer.m in Sources */,
 				6EE9606E1DC25A64003586C1 /* NSData+GZIP.m in Sources */,
-				6EE9605A1DC23CB5003586C1 /* Log.m in Sources */,
+				6EE9605A1DC23CB5003586C1 /* RawLog.m in Sources */,
 				6EE960721DC25D6D003586C1 /* NSString+Crypto.m in Sources */,
+				6EA0AC462064B01900A71863 /* Serializer.h in Sources */,
 				6EE960611DC247A0003586C1 /* LogClient.m in Sources */,
+				6EA0AC422064AFE200A71863 /* JSONSerializer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +415,7 @@
 		};
 		6EE960571DC23C87003586C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7AC2BEE189EE89BC7931604 /* Pods-AliyunLogObjc.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
@@ -310,6 +423,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"GPB_USE_PROTOBUF_FRAMEWORK_IMPORTS=1",
+					"DEBUG=1",
+				);
 				INFOPLIST_FILE = AliyunLogObjc/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -321,6 +438,7 @@
 		};
 		6EE960581DC23C87003586C1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61E8EE7E5F02BF282549BBCF /* Pods-AliyunLogObjc.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
@@ -328,6 +446,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = "GPB_USE_PROTOBUF_FRAMEWORK_IMPORTS=1";
 				INFOPLIST_FILE = AliyunLogObjc/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

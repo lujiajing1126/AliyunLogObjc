@@ -7,7 +7,7 @@
 //
 
 #import "LogClient.h"
-#import "LogGroup.h"
+#import "RawLogGroup.h"
 #import "Const.h"
 #import "NSData+MD5Digest.h"
 #import "NSData+GZIP.h"
@@ -15,7 +15,7 @@
 
 @implementation LogClient
 
-- (id)initWithApp:(NSString*) endPoint accessKeyID:(NSString *)ak accessKeySecret: (NSString *)as projectName: (NSString *)name {
+- (id)initWithApp:(NSString*) endPoint accessKeyID:(NSString *)ak accessKeySecret: (NSString *)as projectName: (NSString *)name serializeType: (AliSLSSerializer) sType {
     if(self = [super init]) {
         if([[endPoint lowercaseString] hasPrefix:@"http://"]) {
             _mEndPoint = [endPoint substringFromIndex:7];
@@ -27,6 +27,7 @@
         _mAccessKeyID = ak;
         _mAccessKeySecret = as;
         _mProject = name;
+        _sType = sType;
     }
     return self;
 }
@@ -50,12 +51,12 @@
     return _mAccessKeySecret;
 }
 
-- (void)PostLog:(LogGroup*)logGroup logStoreName:(NSString*)name call:(void (^)(NSURLResponse* _Nullable response,NSError* _Nullable error) )errorCallback {
+- (void)PostLog:(RawLogGroup*)logGroup logStoreName:(NSString*)name call:(void (^)(NSURLResponse* _Nullable response,NSError* _Nullable error) )errorCallback {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         // Force to use https api interface
         // Due to the requirement of Apple Security Policy after Jan. 1st, 2017
         NSString *httpUrl = [NSString stringWithFormat:@"https://%@.%@/logstores/%@/shards/lb",_mProject,_mEndPoint,name];
-        NSData *httpPostBody = [[logGroup GetJsonPackage] dataUsingEncoding:NSUTF8StringEncoding];
+        NSData *httpPostBody = [logGroup serialize: _sType];
         NSData *httpPostBodyZipped = [httpPostBody gzippedData];
         
         NSDictionary<NSString*,NSString*>* httpHeaders = [self GetHttpHeadersFrom:name url:httpUrl body:httpPostBody bodyZipped:httpPostBodyZipped];
