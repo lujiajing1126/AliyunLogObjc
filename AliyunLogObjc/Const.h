@@ -11,6 +11,9 @@
 #ifndef Const_h
 #define Const_h
 
+#define SDK_VERSION 1.1.1
+#define POST_VALUE_LOG_UA @"AliyunLogClientObjc/1.1.1.20180323"
+
 #define HTTP_DATE_FORMAT @"EEE, dd MMM yyyy HH:mm:ss"
 
 #define KEY_HOST @"Host"
@@ -39,7 +42,6 @@
 #define POST_VALUE_LOG_JSON_CONTENT_TYPE @"application/json"
 #define POST_VALUE_LOG_PB_CONTENT_TYPE @"application/x-protobuf"
 #define POST_VALUE_LOG_SIGNATUREMETHOD @"hmac-sha1"
-#define POST_VALUE_LOG_UA @"AliyunLogClientObjc/1.1.0.20180323"
 
 
 #define POST_METHOD_NAME @"POST"

@@ -21,7 +21,9 @@ CocoaPods is not supported now
 ## Example
 
 ```objc
-#import <AliyunLogObjc/AliyunLogObjc.h> 
+#import <AliyunLogObjc/AliyunLogObjc.h>
+// Use JSON
+// AliSLSProtobufSerializer - Protobuf serializer is available now
 LogClient *client = [[LogClient alloc] initWithApp: @"endpoint" accessKeyID:@"" accessKeySecret:@"" projectName:@"" serializeType: AliSLSJSONSerializer];
 LogGroup *logGroup = [[LogGroup alloc] initWithTopic: @"" andSource:@""];
 Log *log1 = [[Log alloc] init];
