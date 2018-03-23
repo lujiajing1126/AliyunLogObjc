@@ -29,6 +29,7 @@ This SDK is mostly interpreted from the official one, but the quality of code ha
     s.source_files = 'AliyunLogObjc/**/*.{h,m}'
     s.exclude_files = 'AliyunLogObjc/**/*.pbobjc.{h,m}'
     s.requires_arc = true
+    s.prepare_command = 'protoc -I "./AliyunLogObjc" --objc_out="./AliyunLogObjc/serde" "./AliyunLogObjc/sls.proto"'
 
     s.subspec 'no-arc' do |sp|
       sp.source_files = 'AliyunLogObjc/**/*.pbobjc.{h,m}'
