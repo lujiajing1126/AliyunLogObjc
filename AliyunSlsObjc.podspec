@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'AliyunSlsObjc'
-    s.version          = '1.1.1'
+    s.version          = '1.1.4'
     s.summary          = 'Aliyun Sls Log SDK for iOS'
   
     s.description      = <<-DESC
@@ -23,6 +23,7 @@ This SDK is mostly interpreted from the official one, but the quality of code ha
     s.source           = { :git => 'https://github.com/lujiajing1126/AliyunLogObjc.git', :tag => s.version.to_s }
   
     s.ios.deployment_target = '11.2'
+    s.module_name = 'AliyunLogObjc'
   
     s.pod_target_xcconfig = { 'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) GPB_USE_PROTOBUF_FRAMEWORK_IMPORTS=1' }
   
