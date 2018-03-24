@@ -16,7 +16,11 @@ This SDK is mostly interpreted from the official one, but the quality of code ha
 github "lujiajing1126/AliyunLogObjc"
 ```
 
-CocoaPods is not supported now
+### Cocoapods
+
+```
+pod 'AliyunSlsObjc', '~> 1.1.3'
+```
 
 ## Example
 
