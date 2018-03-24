@@ -19,7 +19,7 @@ github "lujiajing1126/AliyunLogObjc"
 ### Cocoapods
 
 ```
-pod 'AliyunSlsObjc', '~> 1.1.3'
+pod 'AliyunSlsObjc', '~> 1.1.4'
 ```
 
 ## Example

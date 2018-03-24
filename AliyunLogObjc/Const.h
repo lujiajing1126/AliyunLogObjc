@@ -11,8 +11,8 @@
 #ifndef Const_h
 #define Const_h
 
-#define SDK_VERSION 1.1.3
-#define POST_VALUE_LOG_UA @"AliyunLogClientObjc/1.1.3.20180324"
+#define SDK_VERSION 1.1.4
+#define POST_VALUE_LOG_UA @"AliyunLogClientObjc/1.1.4.20180324"
 
 #define HTTP_DATE_FORMAT @"EEE, dd MMM yyyy HH:mm:ss"
 
