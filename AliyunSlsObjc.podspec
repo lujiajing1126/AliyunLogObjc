@@ -24,6 +24,7 @@ This SDK is mostly interpreted from the official one, but the quality of code ha
   
     s.ios.deployment_target = '8.0'
     s.module_name = 'AliyunLogObjc'
+    s.header_dir   = "AliyunLogObjc"
   
     s.pod_target_xcconfig = { 'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) GPB_USE_PROTOBUF_FRAMEWORK_IMPORTS=1' }
   
