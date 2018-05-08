@@ -40,7 +40,6 @@
     [package setValue: contents forKey: KEY_LOGS];
     NSError *e = nil;
     NSData *data = [NSJSONSerialization dataWithJSONObject:package options:NSJSONWritingPrettyPrinted error: &e];
-    NSString *jsonString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     if(e) {
         return [[NSData alloc] init];
     }
