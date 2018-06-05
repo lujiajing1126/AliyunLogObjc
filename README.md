@@ -2,11 +2,9 @@
 
 > [Aliyun Sls](https://www.aliyun.com/product/sls) Log SDK written in Objective-C
 
-## Motivation
+This is an UNOFFICIAL SDK for Aliyun SLS, if you have questions you can just propose an issue.
 
-For the official Aliyun Sls SDK is written in Swift 2.3, it's improper for objc app to be packaged with the large Swift Core Lib and Swift Foundation Lib, about 30 Mb.
-
-This SDK is mostly interpreted from the official one, but the quality of code has been improved compared with the unreasonable style in the original one.
+这是非官方SDK，如有问题，请移步 Issues，但请务必不要滥用 Issues，提问之前，请先 **阅读`常见问题`部分 或 搜索是否有相关的问题**
 
 ## Install
 
@@ -39,6 +37,11 @@ Log *log1 = [[Log alloc] init];
 }];
 
 ```
+
+## 常见问题
+
+  - 由于最新版本引入了`SLS`的`protobuf`协议，编译如果找不到相应的协议文件，
+请参考 [Issue #17](https://github.com/lujiajing1126/AliyunLogObjc/issues/17)
 
 ## Acknownledge
 
