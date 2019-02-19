@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'AliyunSlsObjc'
-    s.version          = '1.1.6'
+    s.version          = '1.1.7'
     s.summary          = 'Aliyun Sls Log SDK for iOS'
   
     s.description      = <<-DESC
