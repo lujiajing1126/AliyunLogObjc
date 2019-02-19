@@ -6,5 +6,5 @@ target 'AliyunLogObjc' do
   # use_frameworks!
 
   # Pods for AliyunLogObjc
-  pod 'Protobuf', '~> 3.2.1'
+  pod 'Protobuf', '~> 3.6.1'
 end
