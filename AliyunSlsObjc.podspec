@@ -40,5 +40,5 @@ This SDK is mostly interpreted from the official one, but the quality of code ha
 
     # s.public_header_files = 'Pod/Classes/**/*.h'
     # s.frameworks = 'UIKit', 'MapKit'
-    s.dependency 'Protobuf', '~> 3.2.1'
+    s.dependency 'Protobuf', '~> 3.6.1'
   end
